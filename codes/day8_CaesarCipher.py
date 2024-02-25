@@ -1,18 +1,18 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 def encrypt(text, shift):
-    encryptedText = []
+    encrypted_text = []
     for character in text:
-        characterIndex = alphabet.index(character)
-        encryptedText.append(alphabet[characterIndex - shift])
-    return encryptedText
+        character_index = alphabet.index(character)
+        encrypted_text.append(alphabet[character_index - shift])
+    return encrypted_text
 
 def decrypt(text, shift):
-    decryptedText = []
+    decrypted_text = []
     for character in text:
-        characterIndex = alphabet.index(character)
-        newPos = (characterIndex + shift) % len(alphabet)
-        decryptedText.append(alphabet[newPos])
-    return decryptedText
+        character_index = alphabet.index(character)
+        new_pos = (character_index + shift) % len(alphabet)
+        decrypted_text.append(alphabet[new_pos])
+    return decrypted_text
 
 
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")

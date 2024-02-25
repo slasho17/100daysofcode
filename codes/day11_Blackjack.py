@@ -62,55 +62,55 @@ import random
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-playerHand = []
-computerHand = []
+player_hand = []
+computer_hand = []
 
 input("Welcome to blackjack, press enter to start")
 
-playerHand.append(random.choice(cards))
-playerHand.append(random.choice(cards))
-computerHand.append(random.choice(cards))
-computerHand.append(random.choice(cards))
+player_hand.append(random.choice(cards))
+player_hand.append(random.choice(cards))
+computer_hand.append(random.choice(cards))
+computer_hand.append(random.choice(cards))
 
-print(f"You drew {playerHand[0]} and {playerHand[1]}")
-print(f"The dealer drew {computerHand[0]} and you can't see the other card")
+print(f"You drew {player_hand[0]} and {player_hand[1]}")
+print(f"The dealer drew {computer_hand[0]} and you can't see the other card")
 
-shouldContinue = input("Type y to draw a card, or n to stop.\n") == "y"
-while shouldContinue:
-    playerHand.append(random.choice(cards))
-    print(f"Your hand now is {playerHand}")
+should_continue = input("Type y to draw a card, or n to stop.\n") == "y"
+while should_continue:
+    player_hand.append(random.choice(cards))
+    print(f"Your hand now is {player_hand}")
     
-    if sum(playerHand) > 21 and 11 not in playerHand:
-        print(f"You blew it man, your hand is {sum(playerHand)}")
+    if sum(player_hand) > 21 and 11 not in player_hand:
+        print(f"You blew it man, your hand is {sum(player_hand)}")
         exit()
 
-    if sum(computerHand) < 17:
-        computerHand.append(random.choice(cards))
+    if sum(computer_hand) < 17:
+        computer_hand.append(random.choice(cards))
         print("The dealer drew another card")
 
-    shouldContinue = input("Type y to draw a card, or n to stop.\n") == "y"
+    should_continue = input("Type y to draw a card, or n to stop.\n") == "y"
 
-if sum(playerHand) > 21 and 11 in playerHand:
-    playerHand[playerHand.index(11)] = 1
+if sum(player_hand) > 21 and 11 in player_hand:
+    player_hand[player_hand.index(11)] = 1
 
-if sum(computerHand) > 21 and 11 in computerHand:
-    computerHand[computerHand.index(11)] = 1
+if sum(computer_hand) > 21 and 11 in computer_hand:
+    computer_hand[computer_hand.index(11)] = 1
 
-print(f"Your hand is {sum(playerHand)} and the dealer's hand is {sum(computerHand)}")
+print(f"Your hand is {sum(player_hand)} and the dealer's hand is {sum(computer_hand)}")
 
-if sum(playerHand) > 21:
+if sum(player_hand) > 21:
     print("You lose")
     exit()
-elif sum(computerHand) > 21:
+elif sum(computer_hand) > 21:
     print("You win")
     exit()
     
-if sum(computerHand) == sum(playerHand):
+if sum(computer_hand) == sum(player_hand):
     print("It's a draw")
     exit()
-elif sum(computerHand) > sum(playerHand):
+elif sum(computer_hand) > sum(player_hand):
     print("You lose")
     exit()
-elif sum(computerHand) < sum(playerHand):
+elif sum(computer_hand) < sum(player_hand):
     print("You win")
     exit()

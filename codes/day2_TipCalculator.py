@@ -1,15 +1,15 @@
 print("Welcome to the tip calculator.")
-totalBill = int(input("What was the total bill?"))
+total_bill = int(input("What was the total bill?"))
 
-tipsList = [10, 12, 15]
-tipPercentage = 0
-while (int(tipPercentage) not in tipsList):
+tips_list = [10, 12, 15]
+tip_percentage = 0
+while (int(tip_percentage) not in tips_list):
     print("Tips can be of 10%, 12% or 15%")
-    tipPercentage = int(input("What percentage do you wish to tip?"))
+    tip_percentage = int(input("What percentage do you wish to tip?"))
 
-totalPeople = int(input("How many people will split the bill"))
+total_people = int(input("How many people will split the bill"))
 
-tip = (tipPercentage / totalBill) * 100
-individualBill = (totalBill + tip) / totalPeople
+tip = (tip_percentage / total_bill) * 100
+individual_bill = (total_bill + tip) / total_people
 
-print (f"Each person shall pay R${individualBill} bucks")
+print (f"Each person shall pay R${individual_bill} bucks")

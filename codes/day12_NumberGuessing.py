@@ -9,17 +9,17 @@ if difficulty == 'easy':
 else:
     attempts = 5
 
-occultNumber = random.randint(0, 100)
+occult_number = random.randint(0, 100)
 while attempts > 0:
     print(f"You have {attempts} attempts remaining")
     guess = int(input("Guess a number from 0 to 100: "))
-    if guess == occultNumber:
+    if guess == occult_number:
         print("Congrats, you guessed right :)")
         exit()
-    elif guess > occultNumber:
+    elif guess > occult_number:
         print("Too high")
-    elif guess < occultNumber:
+    elif guess < occult_number:
         print("Too low")
     attempts = attempts -1
 
-print(f"Too bad, you ran out of guess. The number was {occultNumber}")
+print(f"Too bad, you ran out of guess. The number was {occult_number}")

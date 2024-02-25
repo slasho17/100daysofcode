@@ -4,8 +4,8 @@ import random
 
 data = day14_extra.data
 score = 0
-continuePlaying = True
-while continuePlaying:
+continue_playing = True
+while continue_playing:
     clear()
     print (day14_extra.logo)
     print (f"Your current score is {score}")

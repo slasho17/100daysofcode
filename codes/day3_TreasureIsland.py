@@ -21,11 +21,11 @@ print("""
 print("Welcome to treasure island")
 
 directions = ["left", "right"]
-crossRoad = 0
-while crossRoad not in directions:
-    crossRoad = input("You're at a cross road. Where do you want to go, left or right?")
+cross_road = 0
+while cross_road not in directions:
+    cross_road = input("You're at a cross road. Where do you want to go, left or right?")
 
-if crossRoad == "right":
+if cross_road == "right":
     print('''
                                                   -- __
                                                  ~ (@)  ~~~---_
@@ -54,12 +54,12 @@ if crossRoad == "right":
     print("Bad choice, there were dinosaurs with pens for fingers and they didn't like you, u ded")
     exit()
     
-waitOrSwimOptions = ["wait", "swim"]
-waitOrSwim = 0
-while waitOrSwim not in waitOrSwimOptions:
-    waitOrSwim = input("You come to a lake. There is an island in the middle of the lake, do you wait for a boat or do you swim to the island?")
+wait_or_swim_options = ["wait", "swim"]
+wait_or_swim = 0
+while wait_or_swim not in wait_or_swim_options:
+    wait_or_swim = input("You come to a lake. There is an island in the middle of the lake, do you wait for a boat or do you swim to the island?")
     
-if waitOrSwim == "wait":
+if wait_or_swim == "wait":
     print('''
                    ,--.
           ,--.  .--,`) )  .--,
@@ -80,9 +80,9 @@ if waitOrSwim == "wait":
     print("Awful choice, a medusa was strolling around and for some reason you harassed her, u ded")
     exit()
 
-doorOptions = ["red", "yellow", "blue"]
+door_options = ["red", "yellow", "blue"]
 door = 0
-while door not in doorOptions:
+while door not in door_options:
     door = input("You get to the island. There is a house with 3 doors, one red, one yellow and one blue, what do you choose?")
 
 if door == "red":
@@ -137,6 +137,6 @@ elif door == "yellow":
         ____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
         /______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
         ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
-        /______/______/______/______/______/______/______/______/______/______/[TomekK]
+        /______/______/______/______/______/______/______/______/______/______/[Tomek_k]
         *******************************************************************************
     ''')

@@ -5,28 +5,28 @@ numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 print("Welcome to my password generator!")
-numberOfLetters = int(input("How many letters do you want in your password?"))
-numberOfSymbols = int(input("How many symbols do you want in your password?"))
-numberOfNumbers = int(input("How many numbers do you want in your password?"))
+number_of_letters = int(input("How many letters do you want in your password?"))
+number_of_symbols = int(input("How many symbols do you want in your password?"))
+number_of_numbers = int(input("How many numbers do you want in your password?"))
 
-myPassword = []
-while numberOfLetters or numberOfNumbers or numberOfSymbols:
-    charType = random.randint(0, 2)
-    if  charType == 0:
-        if numberOfLetters == 0:
+my_password = []
+while number_of_letters or number_of_numbers or number_of_symbols:
+    char_type = random.randint(0, 2)
+    if  char_type == 0:
+        if number_of_letters == 0:
             continue
-        myPassword.append(letters[random.randint(0, len(letters) -1)])
-        numberOfLetters = numberOfLetters -1
-    elif  charType == 1:
-        if numberOfSymbols == 0:
+        my_password.append(letters[random.randint(0, len(letters) -1)])
+        number_of_letters = number_of_letters -1
+    elif  char_type == 1:
+        if number_of_symbols == 0:
             continue
-        myPassword.append(symbols[random.randint(0, len(symbols) -1)])
-        numberOfSymbols = numberOfSymbols -1
-    elif  charType == 2:
-        if numberOfNumbers == 0:
+        my_password.append(symbols[random.randint(0, len(symbols) -1)])
+        number_of_symbols = number_of_symbols -1
+    elif  char_type == 2:
+        if number_of_numbers == 0:
             continue
-        myPassword.append(numbers[random.randint(0, len(numbers) -1)])
-        numberOfNumbers = numberOfNumbers -1
+        my_password.append(numbers[random.randint(0, len(numbers) -1)])
+        number_of_numbers = number_of_numbers -1
       
-stringPassword = ''.join(myPassword)  
-print("Your password is " + stringPassword)
+string_password = ''.join(my_password)  
+print("Your password is " + string_password)

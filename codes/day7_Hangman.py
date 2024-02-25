@@ -62,31 +62,31 @@ stages = ['''
 
 r = RandomWords()
 word = r.get_random_word()
-displayWord = ["_"] * len(word)
+display_word = ["_"] * len(word)
 lives = 6
-lettersGuessed = []
+letters_guessed = []
 print(word)
 while True:
     clear()
     print(stages[lives])
-    print(displayWord)
+    print(display_word)
     guess = input("Choose a letter\n").lower()
-    if guess in lettersGuessed:
+    if guess in letters_guessed:
         print("You already tried this one, try again")
         continue
-    lettersGuessed.append(guess)
-    guessedRight = False
+    letters_guessed.append(guess)
+    guessed_right = False
     
     for i, letter in enumerate(word):
         if guess == letter:
-            displayWord[i] = guess
-            guessedRight = True
+            display_word[i] = guess
+            guessed_right = True
             
-            if "_" not in displayWord:
+            if "_" not in display_word:
                 print("You win, congrats")
                 exit()
 
-    if guessedRight is False:
+    if guessed_right is False:
         lives = lives -1
 
     if lives == 0:
